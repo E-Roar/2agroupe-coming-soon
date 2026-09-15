@@ -23,19 +23,6 @@ body {
   overflow: hidden;
 }
 
-header {
-  position: relative;
-  z-index: 5;
-  display: flex;
-  justify-content: center;
-  padding: 2.5rem 1.5rem 0;
-}
-header img {
-  height: 110px;
-  width: auto;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
-}
-
 #content {
   position: relative;
   z-index: 5;
@@ -49,8 +36,13 @@ header img {
   padding: 0 1.5rem;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
 }
+#content img {
+  height: clamp(90px, 14vw, 150px);
+  width: auto;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.45));
+}
 #content h1 {
-  margin: 0;
+  margin: 1.5rem 0 0;
   font-size: clamp(1.6rem, 4.5vw, 2.8rem);
   font-weight: 900;
   letter-spacing: 0.04em;
@@ -64,19 +56,6 @@ header img {
   max-width: 34rem;
   font-size: clamp(1rem, 2.4vw, 1.25rem);
   opacity: 0.92;
-}
-#content .contact {
-  margin-top: 2rem;
-  font-size: 1rem;
-  opacity: 0.85;
-}
-#content .contact a {
-  color: #E8A24A;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(232, 162, 74, 0.5);
-}
-#content .contact a:hover {
-  border-bottom-color: #E8A24A;
 }
 
 #outerCraneContainer {
@@ -220,7 +199,6 @@ header img {
 }
 
 @media (max-width: 640px) {
-  header img { height: 80px; }
   .craneOne { left: -10%; }
   .craneTwo { left: 45%; }
   .craneThree { left: 75%; }
@@ -229,14 +207,9 @@ header img {
 </head>
 <body>
 
-<header>
-  <img src="logo.png" alt="2A GROUPE">
-</header>
-
 <div id="content">
+  <img src="logo.png" alt="2A GROUPE">
   <h1>Notre nouveau site <em>arrive bientôt</em></h1>
-  <p>2A GROUPE — construction &amp; immobilier au Maroc. Nous construisons quelque chose de grand, et ça vaut le détour.</p>
-  <p class="contact">En attendant, écrivez-nous à <a href="mailto:contact@2agroupe.ma">contact@2agroupe.ma</a></p>
 </div>
 
 <div id="outerCraneContainer">
